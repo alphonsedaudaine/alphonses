@@ -52,7 +52,7 @@ if (message.content.startsWith(prefix + "reaction-roles")) {
 });
 
 const Util = require('discord.js');
-const { GOOGLE_API_KEY } = process.env.GGAPIKEY;
+const { GOOGLE_API_KEY } = (`${process.env.GGAPIKEY}`);
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 
