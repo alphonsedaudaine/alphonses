@@ -31,15 +31,15 @@ if (message.content.startsWith(prefix + "reaction-roles")) {
     var embed1 = new Discord.RichEmbed()
       .setAuthor("Choisis ton rôle ^^")
       .setColor("#f7f7f7")
-      .setDescription("Visiteur ● \:bust_in_silhouette:");
+      .setDescription("😜 Ami ● \:stuck_out_tongue_winking_eye:");
     const mainMessage = await message.channel.send(embed1);
 
-    await mainMessage.react("👤");
+    await mainMessage.react("😜");
 
     const panier = mainMessage.createReactionCollector((reaction, user) => user.id === message.author.id);
 
     panier.on('collect', async (reaction) => {
-      if (reaction.emoji.name === "👤") {
+      if (reaction.emoji.name === "😜") {
         var role = message.guild.roles.find("id", "472023693917159424");
         message.member.addRole(role)
       }
